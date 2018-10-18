@@ -8,9 +8,7 @@ namespace War
 
     class Card
     {
-        private suit suit;
         public suit Suit { get; set; }
-        private int faceValue;
         public int FaceValue { get; set; }
 
         public Card(suit suit, int faceValue)
