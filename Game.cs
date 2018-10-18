@@ -27,7 +27,7 @@ namespace War
          */
         public String Play()
         {
-            // Apparently games of war can go on forever, so I'm putting an upperbound
+            // Apparently games of war can go on for a super long time, so I'm putting an upper bound
             // on how many rounds you can play in a single game.
             int rounds = 0;
             int roundBound = 100;
@@ -35,7 +35,6 @@ namespace War
             // Keep looping until only one person has cards or round bound hit.
             while (this.players.Count(x => !x.IsOutOfCards()) > 1 && rounds < roundBound)
             {
-                int remaining = this.players.Count(x => !x.IsOutOfCards());
                 this.playRound(this.players).Wins++;
                 rounds++;
             }
